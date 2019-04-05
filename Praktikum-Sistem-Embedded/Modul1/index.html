@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<title>Sistem Embedded</title>
+	</head>
+	<body>
+		<p><H3 align='center'> Modul 1 </H3></p>
+		<p><H4 align='center'> Input dan Output Data Digital </H4></p>
+		<p>Tugas</p>
+		<p> Membuat animasi sederhana dengan 5 buah lampu LED</p>
+		<video controls>
+			<source src="WhatsApp Video 2019-02-26 at 19.48.07.mp4" type="video/mp4">
+		</video>
+		<hr>
+		<p>Code dari program diatas</p>
+		<hr>
+		<code>
+		void setup() {<br><br>
+  
+			pinMode(13, OUTPUT);<br>
+			pinMode(12, OUTPUT);<br>
+			pinMode(11, OUTPUT);<br>
+			pinMode(10, OUTPUT);<br>
+			pinMode(9, OUTPUT);<br>
+		}<br><br>
+
+
+		void loop() {<br><br>
+			digitalWrite(11, HIGH);<br>   
+			delay(300);          <br>    
+			digitalWrite(12, HIGH);  <br> 
+			digitalWrite(10, HIGH); <br>  
+			delay(300);             <br> 
+			digitalWrite(13, HIGH); <br>  
+			digitalWrite(9, HIGH);  <br> 
+			delay(300);     <br>        
+  digitalWrite(13, LOW);   <br>
+  digitalWrite(12, LOW);  <br> 
+  digitalWrite(11, LOW);  <br> 
+  digitalWrite(10, LOW);  <br> 
+  digitalWrite(9, LOW);  <br>  
+  delay(300);<br>
+  digitalWrite(13, HIGH);   <br>
+  digitalWrite(12, HIGH);  <br> 
+  digitalWrite(11, HIGH);  <br> 
+  digitalWrite(10, HIGH);  <br> 
+  digitalWrite(9, HIGH);  <br>  
+  delay(300);<br>
+  digitalWrite(13, LOW); <br>  
+  digitalWrite(12, LOW); <br>  
+  digitalWrite(11, LOW);  <br> 
+  digitalWrite(10, LOW);  <br> 
+  digitalWrite(9, LOW);   <br> 
+  delay(300);<br>
+  digitalWrite(13, HIGH);   <br>
+  digitalWrite(12, HIGH);   <br>
+  digitalWrite(11, HIGH);   <br>
+  digitalWrite(10, HIGH);   <br>
+  digitalWrite(9, HIGH);    <br>
+  delay(300);<br>
+  digitalWrite(13, LOW);   <br>
+  digitalWrite(12, LOW);   <br>
+  digitalWrite(11, LOW);   <br>
+  digitalWrite(10, LOW);   <br>
+  digitalWrite(9, LOW);    <br>
+  delay(300);<br>
+  digitalWrite(13, HIGH);   <br>
+  digitalWrite(12, HIGH);   <br>
+  digitalWrite(11, HIGH);   <br>
+  digitalWrite(10, HIGH);   <br>
+  digitalWrite(9, HIGH);   <br> 
+  delay(300);<br>
+  digitalWrite(13, LOW);   <br>
+  digitalWrite(12, LOW);   <br>
+  digitalWrite(11, LOW);   <br>
+  digitalWrite(10, LOW);   <br>
+  digitalWrite(9, LOW);    <br>
+  delay(300);<br>
+  
+}
+		</code>
+		<hr>
+		<p> dengan tambahan switch </p>
+		<p> ketika switch ditekan 2 buah lampu LED menyala dan ketika tidak ditekan  3 buah lampu LED menyala</p>
+		<video controls>
+			<source src="WhatsApp Video 2019-02-26 at 19.47.58.mp4" type="video/mp4">
+		</video>
+		<hr>
+	</body>
+
+</html>

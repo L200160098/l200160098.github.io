@@ -1,0 +1,95 @@
+<html>
+	<head>
+		<title>Sistem Embedded</title>
+	</head>
+	<body>
+		<p><H3 align='center'> Modul 2 </H3></p>
+		<p><H4 align='center'> Input dan Output Analog </H4></p>
+		<p>Tugas</p>
+		<p> menggunakan 5 buah lampu LED sebagai indikator posisi putar knop potensiometer</p>
+		<video controls>
+			<source src="WhatsApp Video 2019-03-04 at 16.30.24.mp4" type="video/mp4">
+		</video>
+		<hr>
+		<p>Code dari program diatas</p>
+		<hr>
+		<code>
+			int sensorPin = A0; <br>
+int sensorValue = 0;<br><br>
+
+void setup() {<br><br>
+  
+  pinMode(13, OUTPUT);<br>
+  pinMode(12, OUTPUT);<br>
+  pinMode(11, OUTPUT);<br>
+  pinMode(10, OUTPUT);<br>
+  pinMode(9, OUTPUT);<br>
+}<br><br>
+
+void loop() {<br><br>
+  
+  sensorValue = analogRead(sensorPin);<br>
+  if(sensorValue>=0 && sensorValue <= 200){<br>
+    digitalWrite(12, LOW);<br>
+    digitalWrite(13, HIGH);<br>
+    delay(sensorValue);<br>
+  }else if(sensorValue >=201 && sensorValue <=400){<br>
+    digitalWrite(13, LOW);<br>
+    digitalWrite(12, HIGH);<br>
+    digitalWrite(11, LOW);<br>
+    delay(sensorValue);<br>
+  }else if(sensorValue >=401 && sensorValue <=600){<br>
+    digitalWrite(12, LOW);<br>
+    digitalWrite(11, HIGH);<br>
+    digitalWrite(10, LOW);<br>
+    delay(sensorValue);<br>
+  }else if(sensorValue >=601 && sensorValue <=800){<br>
+    digitalWrite(11, LOW);<br>
+    digitalWrite(10, HIGH);<br>
+    digitalWrite(9, LOW);<br>
+    delay(sensorValue);<br>
+  }else if(sensorValue >800){<br>
+    digitalWrite(10, LOW);<br>
+    digitalWrite(9, HIGH);<br>
+    delay(sensorValue);<br>
+  }<br>
+}<br>
+		</code>
+		<hr>
+		<p> Mengatur tingkat kecerahan LED menggunakan potensiometer</p>
+		
+		<video controls>
+			<source src="WhatsApp Video 2019-03-04 at 16.30.32.mp4" type="video/mp4">
+		</video>
+		<hr>
+		<p>Code dari program diatas</p>
+		<hr>
+		<code>
+		int sensorPin = A0;<br>
+int ledPin = 9;<br>
+int sensorValue =0;<br>
+int fadeValue = 1023;<br>
+<br>
+void setup() {<br>
+  <br>
+  pinMode(ledPin, OUTPUT);<br>
+}<br>
+<br>
+void loop() {<br>
+  <br>
+  sensorValue = analogRead(sensorPin);<br>
+  if( sensorValue <= fadeValue){<br>
+    fadeValue +=5;<br>
+    analogWrite(ledPin, fadeValue);<br>
+    delay(300);<br>
+  }else{<br>
+    fadeValue -=5;<br>
+    analogWrite(ledPin, fadeValue);<br>
+    delay(300);<br>
+  }<br>
+}<br>
+		</code>
+		<hr>
+	</body>
+
+</html>
